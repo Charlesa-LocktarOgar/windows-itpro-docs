@@ -31,6 +31,9 @@ Select Windows Defender Firewall.
 >[!IMPORTANT]
 >A single Endpoint Protection profile may contain up to a maximum of 150 firewall rules. If a client device requires more than 150 rules, then multiple profiles must be assigned to it.
 
+>[!IMPORTANT]
+>Intune MDM configured firewall rules through the Firewall CSP on Windows client will not show up in Inbound/Outbound Rules of the Windows Defender Firewall with Advance Security applet (wf.msc). Instead, when active they will be shown under Monitoring > Firewall. Note this is again only while the MDM policy is active against the device. For troubleshooting refer to this article: https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452
+
 ## Firewall rule components
 
 The firewall rule configurations in Intune use the Windows CSP for Firewall. For more information, see [Firewall CSP](/windows/client-management/mdm/firewall-csp).
